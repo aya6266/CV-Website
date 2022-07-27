@@ -8,15 +8,16 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  overflow-x: hidden !important;
 }
 
 :root {
-  --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-bg: #252422;
+  --color-bg-variant: #2a2a29;
+  --color-primary: #eb5e28;
+  --color-primary-variant: rgba(247, 111, 0, 0.777);
   --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
+  --color-light: #ccc5b9;
 
   --transition: all 400ms ease;
 

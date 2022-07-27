@@ -4,21 +4,36 @@ import { AiOutlineHtml5 } from "react-icons/ai";
 import { DiCss3Full } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
 import { SiWebpack } from "react-icons/si";
-import { DiGit } from "react-icons/di";
+import { DiGit, DiMongodb } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { SiBabel } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
 import { SiJest } from "react-icons/si";
-//1.48 need to add divs to each software
+import { motion, Variants } from "framer-motion";
+import {
+  leftAnimate,
+  rightAnimate,
+  upAnimate,
+  opAnimation,
+} from "../../animations";
 export const Experience = () => {
   return (
-    <section id="experience">
-      <h5>The Skills I Have</h5>
-      <h2>My Experience</h2>
+    <motion.section
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+      id="experience"
+    >
+      <motion.h5 variants={leftAnimate}>The Skills I Have</motion.h5>
+      <motion.h2 variants={rightAnimate}>My Experience</motion.h2>
 
-      <div className="container experience__container">
+      <motion.div
+        variants={upAnimate}
+        className="container experience__container"
+      >
         <div className="experience__frontend">
           <h3>Development</h3>
           <div className="experience__content mobile">
@@ -99,10 +114,17 @@ export const Experience = () => {
                 <small className="text-light">Test-running</small>
               </div>
             </article>
+            <article className="experience__details">
+              <DiMongodb className="experience__details-icon" />
+              <div>
+                <h4>MongoDB</h4>
+                <small className="text-light">NoSQL database</small>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

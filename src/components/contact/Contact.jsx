@@ -3,7 +3,13 @@ import "./contact.css";
 import { MdOutlineMail } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
-
+import { motion, Variants } from "framer-motion";
+import {
+  leftAnimate,
+  rightAnimate,
+  upAnimate,
+  opAnimation,
+} from "../../animations";
 export const Contact = () => {
   const form = useRef();
 
@@ -30,43 +36,30 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact">
-      <h5>Give Me A Message</h5>
-      <h2>Contact Me</h2>
+    <motion.section
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+      id="contact"
+    >
+      <motion.h5 variants={leftAnimate}>Give Me A Message</motion.h5>
+      <motion.h2 variants={rightAnimate}>Contact Me</motion.h2>
 
-      <div className="container contact__container">
-        <div className="contact__options">
-          <article className="contact__option">
-            <MdOutlineMail className="contact__option-icon" />
-            <h4>Email</h4>
-            <h5>Myemail@gmail.com</h5>
-            <a href="mailto:myemail@gmail.com">Send me a message</a>
-          </article>
-
-          <article className="contact__option">
-            <BsWhatsapp className="contact__option-icon" />
-            <h4>WhatsApp</h4>
-            <h5>Kyle Albert</h5>
-            <a href="https://api.whatsapp.com/send?phone=+7592576441">
-              Send me a message
-            </a>
-          </article>
-        </div>
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Who are you?" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea
-            name="message"
-            rows="7"
-            placeholder="Say Hi :}"
-            required
-          ></textarea>
-          <button type="submit" className="btn btn-primary">
-            Send Message
-          </button>
-        </form>
-      </div>
-    </section>
+      <motion.form variants={upAnimate} ref={form} onSubmit={sendEmail}>
+        <input type="text" name="name" placeholder="Who are you?" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea
+          name="message"
+          rows="7"
+          placeholder="Say Hi :}"
+          required
+        ></textarea>
+        <button type="submit" className="btn btn-primary">
+          Send Message
+        </button>
+      </motion.form>
+    </motion.section>
   );
 };
 

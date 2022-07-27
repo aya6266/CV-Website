@@ -1,51 +1,67 @@
 import React from "react";
 import "./about.css";
-import ME from "../../assets/ME.jpg";
+
 import { FiAward } from "react-icons/fi";
-import { BsFolderCheck } from "react-icons/bs";
+import { BsFolderCheck, BsFillBriefcaseFill } from "react-icons/bs";
+import Video from "./Video";
+import { motion, Variants } from "framer-motion";
+import { leftAnimate, rightAnimate, upAnimate } from "../../animations";
 
 export const About = () => {
   return (
-    <section id="about">
-      <h5>Get To Know</h5>
-      <h2>About Me</h2>
+    <motion.section
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+      id="about"
+    >
+      <motion.h5 variants={leftAnimate}>Get To Know</motion.h5>
+      <motion.h2 variants={rightAnimate}>About Me</motion.h2>
 
       <div className="container about__container">
-        <div className="about__me">
-          <div className="about__me-image">
-            <img src={ME} alt="About Me" />
-          </div>
-        </div>
+        <motion.div variants={leftAnimate} className="about__me">
+          <Video />
+        </motion.div>
         <div className="about__content">
-          <div className="about__cards">
+          <motion.div
+            variants={upAnimate}
+            transition={{ staggerChildren: 0.5 }}
+            className="about__cards"
+          >
             <article className="about__card">
-              <FiAward className="about__icon" />
+              <BsFillBriefcaseFill className="about__icon" />
               <h5>Experience</h5>
-              <small>LOL</small>
+              <small>2 years in STEM related field</small>
             </article>
             <article className="about__card">
               <FiAward className="about__icon" />
-              <h5>Experience</h5>
-              <small>LOL</small>
+              <h5>Education</h5>
+              <small>2:1 Chemistry Bsc</small>
             </article>
             <article className="about__card">
               <BsFolderCheck className="about__icon" />
               <h5>Projects</h5>
               <small>LOL</small>
             </article>
-          </div>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit fuga,
-            accusantium quae delectus dolorem illum hic voluptatibus optio
-            aspernatur vero commodi mollitia totam natus eum excepturi
-            architecto numquam eveniet consectetur?
-          </p>
-          <a href="" className="btn btn-primary">
+          </motion.div>
+          <motion.p variants={leftAnimate}>
+            I was drawn to programming by my creativity and love of analytical
+            problem solving. Being a self-driven front-end focused software
+            developer, my ideal position would be with a company where I can
+            apply my knowledge of web-development to problem solving whilst
+            working my way to becoming a full stack developer.
+          </motion.p>
+          <motion.a
+            variants={upAnimate}
+            href="#contact"
+            className="btn btn-primary"
+          >
             Let's Talk
-          </a>
+          </motion.a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
