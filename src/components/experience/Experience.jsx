@@ -4,9 +4,8 @@ import { AiOutlineHtml5 } from "react-icons/ai";
 import { DiCss3Full } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
 import { SiWebpack } from "react-icons/si";
-import { DiGit, DiMongodb } from "react-icons/di";
+import { DiGit, DiMongodb, DiJqueryLogo } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
 import { SiBabel } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
@@ -87,10 +86,10 @@ export const Experience = () => {
               </div>
             </article>
             <article className="experience__details">
-              <SiTailwindcss className="experience__details-icon" />
+              <DiJqueryLogo className="experience__details-icon" />
               <div>
-                <h4>Tailwindcss</h4>
-                <small className="text-light">Styling</small>
+                <h4>jQuery</h4>
+                <small className="text-light">JavaScript library</small>
               </div>
             </article>
             <article className="experience__details">

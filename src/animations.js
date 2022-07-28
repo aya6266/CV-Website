@@ -4,7 +4,7 @@ export const leftAnimate = {
     x: 0,
     opacity: 1,
     rotate: [0, 10, 0],
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
+    transition: { type: "spring", bounce: 0.5, duration: 1 },
   },
 };
 
@@ -14,7 +14,7 @@ export const rightAnimate = {
     x: 0,
     opacity: 1,
     rotate: [0, 10, 0],
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
+    transition: { type: "spring", bounce: 0.5, duration: 1 },
   },
 };
 
@@ -23,7 +23,7 @@ export const upAnimate = {
   onscreen: {
     y: 0,
     opacity: 1,
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
+    transition: { type: "spring", bounce: 0.5, duration: 1 },
   },
 };
 
@@ -31,6 +31,6 @@ export const opAnimation = {
   offscreen: { opacity: 0 },
   onscreen: {
     opacity: 1,
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
+    transition: { type: "spring", bounce: 0.5, duration: 1 },
   },
 };

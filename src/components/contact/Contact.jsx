@@ -39,7 +39,7 @@ export const Contact = () => {
     <motion.section
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ staggerChildren: 0.5 }}
       id="contact"
     >

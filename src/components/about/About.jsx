@@ -42,7 +42,7 @@ export const About = () => {
             <article className="about__card">
               <BsFolderCheck className="about__icon" />
               <h5>Projects</h5>
-              <small>LOL</small>
+              <small>Present in Portfolio</small>
             </article>
           </motion.div>
           <motion.p variants={leftAnimate}>
