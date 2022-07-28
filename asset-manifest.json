@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/CV-Website/static/css/main.091b583f.css",
-    "main.js": "/CV-Website/static/js/main.8f526bee.js",
+    "main.js": "/CV-Website/static/js/main.27178eea.js",
     "static/media/art__generator.svg": "/CV-Website/static/media/art__generator.b772b0ecdff75957e0c3b2ffaca2e60f.svg",
     "static/media/My-Art-Your-Art.svg": "/CV-Website/static/media/My-Art-Your-Art.0d9b468f64ec45f7fb9fc359930ef7fb.svg",
     "static/media/face2.svg": "/CV-Website/static/media/face2.b93b802408649e3fb1bc21f771209c7c.svg",
     "static/media/face6.svg": "/CV-Website/static/media/face6.fd17909f038ee46923c5089e0343b6da.svg",
-    "static/media/Kyle-Albert-CV.pdf": "/CV-Website/static/media/Kyle-Albert-CV.69efd8fa62735c2ddb0c.pdf",
+    "static/media/Kyle-Albert-CV.pdf": "/CV-Website/static/media/Kyle-Albert-CV.e18b1cb262e6597d1d17.pdf",
     "static/media/face12.svg": "/CV-Website/static/media/face12.72a0dea6289244ca20f88310c94b1ab3.svg",
     "static/media/face7.svg": "/CV-Website/static/media/face7.101c019471083b44112da563dbe346d8.svg",
     "static/media/face11.svg": "/CV-Website/static/media/face11.7a6aab39f0ca6a4ce8385940c6883eae.svg",
@@ -29,10 +29,10 @@
     "static/media/EtchaASketch.svg": "/CV-Website/static/media/EtchaASketch.6ad475b63be2398890056393f35bc8b9.svg",
     "index.html": "/CV-Website/index.html",
     "main.091b583f.css.map": "/CV-Website/static/css/main.091b583f.css.map",
-    "main.8f526bee.js.map": "/CV-Website/static/js/main.8f526bee.js.map"
+    "main.27178eea.js.map": "/CV-Website/static/js/main.27178eea.js.map"
   },
   "entrypoints": [
     "static/css/main.091b583f.css",
-    "static/js/main.8f526bee.js"
+    "static/js/main.27178eea.js"
   ]
 }
